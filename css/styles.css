@@ -199,13 +199,16 @@ img{
     border-radius: .5rem;
 }
 
-/* main*/ 
+/* main-pricipal*/ 
 
 .tatuajes{
     display: grid;
     grid-template-areas: "titulo seccion1 seccion2 seccion3";
     grid-template-areas: "titulo titulo titulo"
                          "seccion1 seccion2 seccion3";
+    padding: 3rem;
+    gap: 3rem;
+    background-color: darkgreen;
 }
 
 .tatuajes__diseño{
@@ -215,6 +218,7 @@ img{
 
 .tatuajes__1{
     grid-area: seccion1;
+    text-align: center;
 }
 
 .tatuajes__2{
@@ -223,6 +227,35 @@ img{
 
 .tatuajes__3{
     grid-area: seccion3;
+}
+
+/* main-secundario*/
+
+.ayuda{
+    display: grid;
+    grid-template-areas: "ayuda apt1 apt2 apt3";
+    grid-template-areas: "ayuda apt1"
+                         "ayuda apt2"
+                         "ayuda apt3";
+    padding: 3rem;
+    gap: 3rem;
+    background-color:darkslategrey;
+}
+
+.ayuda__ayuda{
+    grid-area: ayuda;
+}
+
+.ayuda__apt1{
+    grid-area: apt1;
+}
+
+.ayuda__apt2{
+    grid-area: apt2;
+}
+
+.ayuda__apt3{
+    grid-area: apt3;
 }
 /* Footer*/
 
@@ -243,6 +276,7 @@ img{
     text-align: center;
     padding: 3rem;
     gap: 2rem;
+    background-color: yellowgreen;
 }
 
 @media (min-width: 768px) {
