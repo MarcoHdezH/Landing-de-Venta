@@ -1,5 +1,7 @@
 :root{
-    --fuentePrincipal:'Inconsolata', cursive;
+    --fuentePrincipal:'Open Sans', cursive;
+    --fuenteTitulos:'PT Sans', cursive;
+    --Blanco:#ffffff;
 }
 
 html {
@@ -11,14 +13,8 @@ html {
     box-sizing: inherit;
 }
 
-body{
-    background-image: linear-gradient(to top, #DFE9F3, var(--blanco) 100%);
-}
-
-
-
 h1, h2, h3, h4{
-    font-family: var(--fuentePrincipal);
+    font-family: var(--fuenteTitulos);
     line-height: 1.2;
 }
 
@@ -38,7 +34,8 @@ h4{
     font-size: 2.8rem;
 }
 p{
-    font-size: var(--fuentePrincipal);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.8rem;
 }
 
 a{
@@ -51,41 +48,80 @@ img{
 }
 
 .header{
-    background-image: url(../assets/img/header.jpg);
-    padding: rem;
-}
-
-.header__image{
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: absolute;
-    background-color: rgb(0 0 0/ 70%);
-    width: 100%;
+    background-image: url(../assets/img/header.jpg);
 }
 
+.header__titulo{
+    text-align: center;
+    font-weight: bold;
+}
 .header__contenedor{
-    grid-template-rows: repeat(2,1fr);
-    padding: 2rem;
+    width: min(90%, 120rem);
+    margin: 0 auto;
 }
 .header__barra{
-    width: min(95% , 120rem);
-    margin: 0 auto;
-    display: grid;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-top: 4rem;
 }
 
-.header__presentacion, p{
-    font-size: 2rem;
-    text-align: center;
-    padding: 4rem;
+@media (min-width: 768px) {
+    .header__barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.header__texto{
-    color: white;
+.header__navegacion__enlace {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .header__navegacion{
+        display: flex;
+        gap: 2rem;
+    }
+    .header__navegacion a{
+        font-size: 2rem;
+    }
+}
+
+.header__texto {
+    text-align: center;
+    color: var(--blanco);
+    margin-top: 5rem;
+ }
+
+ @media (min-width: 768px) {
+    .header__texto {
+        margin-top: 15rem;
+    }
+    .header__texto p{
+        font-size: 2rem;
+    }
+}
+
+.header__color{
+    color: var(--Blanco) ;
+}
+
+.header__margin{
+    margin: 0.5;
+}
+
+/* Jumbotron*/
+
+.jumbotron{
+    padding: 3rem;
+    background-color:cornflowerblue;
+}
+
+.jumbotron__contenedor{
+    background-color: yellow;
 }
