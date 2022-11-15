@@ -1,3 +1,91 @@
 :root{
     --fuentePrincipal:'Inconsolata', cursive;
 }
+
+html {
+    box-sizing: border-box;
+    font-size:62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-image: linear-gradient(to top, #DFE9F3, var(--blanco) 100%);
+}
+
+
+
+h1, h2, h3, h4{
+    font-family: var(--fuentePrincipal);
+    line-height: 1.2;
+}
+
+h1{
+    font-size: 4.8rem;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.2rem;
+}
+
+h4{
+    font-size: 2.8rem;
+}
+p{
+    font-size: var(--fuentePrincipal);
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+img{
+    max-width: 100%;
+}
+
+.header{
+    background-image: url(../assets/img/header.jpg);
+    padding: rem;
+}
+
+.header__image{
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    background-color: rgb(0 0 0/ 70%);
+    width: 100%;
+}
+
+.header__contenedor{
+    grid-template-rows: repeat(2,1fr);
+    padding: 2rem;
+}
+.header__barra{
+    width: min(95% , 120rem);
+    margin: 0 auto;
+    display: grid;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.header__presentacion, p{
+    font-size: 2rem;
+    text-align: center;
+    padding: 4rem;
+}
+
+.header__texto{
+    color: white;
+}
