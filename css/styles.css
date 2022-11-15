@@ -2,6 +2,7 @@
     --fuentePrincipal:'Open Sans', cursive;
     --fuenteTitulos:'PT Sans', cursive;
     --Blanco:#ffffff;
+    --secundario:#0097A7;
 }
 
 html {
@@ -38,9 +39,13 @@ p{
     font-size: 1.8rem;
 }
 
+input{
+    font-size: 2rem;
+}
+
 a{
     text-decoration: none;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 
 img{
@@ -78,7 +83,6 @@ img{
 .header__navegacion__enlace {
     display: block;
     text-align: center;
-    font-size: 1.8rem;
     color: var(--blanco);
 }
 
@@ -87,9 +91,7 @@ img{
         display: flex;
         gap: 2rem;
     }
-    .header__navegacion a{
-        font-size: 2rem;
-    }
+
 }
 
 .header__texto {
@@ -119,9 +121,72 @@ img{
 
 .jumbotron{
     padding: 3rem;
-    background-color:cornflowerblue;
+    background-color: rgba(52, 50, 50, 0.221)
 }
 
-.jumbotron__contenedor{
-    background-color: yellow;
+.jumbotron__bloques{
+    display: grid;
+    grid-template-areas: "mensaje input imagen";
+    grid-template-areas: "mensaje"
+                         "imagen"
+                         "input";
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .jumbotron__bloques{
+        grid-template-areas: "mensaje imagen"
+                              "mensaje imagen "
+                              "input imagen";
+    }
+}
+
+@media (min-width: 480px) {
+    .jumbotron__bloques{
+        grid-template-areas: "mensaje imagen"
+                             "mensaje imagen"
+                             "input   imagen";
+    }
+}
+
+.jumbotron__mensaje{
+    text-align: center;
+    margin-top: 5rem;
+    grid-area: mensaje;
+}
+
+.jumbotron__input{
+    grid-area: input;
+    justify-content: center;
+}
+
+.jumbotron__imagen{
+    grid-area: imagen;
+}
+
+.jumbotron__correo{
+    display: grid;
+    grid-template-columns: 65% 35%
+}
+
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+}
+
+.input__text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
 }
