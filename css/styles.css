@@ -34,6 +34,14 @@ h3{
 h4{
     font-size: 2.8rem;
 }
+
+h5{
+    font-size: 2rem;
+}
+
+h6{
+    font-size: 1.6rem;
+}
 p{
     font-family: var(--fuentePrincipal);
     font-size: 1.8rem;
@@ -189,4 +197,82 @@ img{
     border: none;
     padding: 1.5rem;
     border-radius: .5rem;
+}
+
+/* main*/ 
+
+.tatuajes{
+    display: grid;
+    grid-template-areas: "titulo seccion1 seccion2 seccion3";
+    grid-template-areas: "titulo titulo titulo"
+                         "seccion1 seccion2 seccion3";
+}
+
+.tatuajes__diseño{
+    grid-area: titulo;
+    text-align: center;
+}
+
+.tatuajes__1{
+    grid-area: seccion1;
+}
+
+.tatuajes__2{
+    grid-area: seccion2;
+}
+
+.tatuajes__3{
+    grid-area: seccion3;
+}
+/* Footer*/
+
+.footer{
+    height: 25rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.footer__section{
+    display: grid;
+    grid-template-areas: "Nombre Redes Soporte Nosotros Legal Derechos";
+    grid-template-areas: "Nombre Nombre"
+                         "Redes Soporte"
+                         "Nosotros Legal"
+                         "Derechos Derechos";
+    text-align: center;
+    padding: 3rem;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .footer__section{
+        grid-template-areas: "Nombre Nombre Nombre Nombre"
+                             "Redes Soporte Nosotros Legal"
+                             "Derechos Derechos Derechos Derechos";
+    }
+}
+
+.footer_Nombre{
+    grid-area: Nombre;
+}
+
+.footer__Redes{
+    grid-area: Redes;
+}
+
+.footer_Soporte{
+    grid-area: Soporte;
+}
+
+.footer__Nosotros{
+    grid-area: Nosotros;
+}
+
+.footer__Legal{
+    grid-area: Legal;
+}
+
+.footer__Derechos{
+    grid-area: Derechos;
 }
