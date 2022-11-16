@@ -2,6 +2,7 @@
     --fuentePrincipal:'Open Sans', cursive;
     --fuenteTitulos:'PT Sans', cursive;
     --Blanco:#ffffff;
+    --Negro:#000000;
     --secundario:#0097A7;
 }
 
@@ -95,6 +96,14 @@ img{
 }
 @media (min-width: 768px) {
     .header__barra{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__barra{
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -106,23 +115,43 @@ img{
 .header__navegacion__enlace {
     display: block;
     text-align: center;
-    color: var(--blanco);
     padding: 0.5rem;
+    color: var(--Blanco);
 }
 @media (min-width: 768px) {
     .header__navegacion{
         display: flex;
+        justify-content: center;
         gap: 2rem;
+        margin-top: 2rem;
+    }
+    .header__navegacion__enlace{
+        font-size: 2.1rem;
+        padding: 1rem;
     }
 }
+
+@media (min-width: 1024px) {
+    .header__navegacion{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .header__navegacion__enlace{
+        font-size: 2.1rem;
+    }
+}
+
+
 .header__texto {
     text-align: center;
-    color: var(--blanco);
+    color: var(--Blanco);
     margin-top: 3rem;
  }
  @media (min-width: 768px) {
     .header__texto {
-        margin-top: 12rem;
+        margin-top: 10rem;
     }
     .header__texto p{
         font-size: 2rem;
@@ -176,7 +205,7 @@ img{
 /* main-pricipal*/ 
 
 .main{
-    background-color: black;
+    background-color: var(--Negro);
     color: var(--Blanco);
 }
 .main__principal{
@@ -188,6 +217,49 @@ img{
                          "sc3";
     padding: 3rem;
     gap: 3rem;
+}
+
+.main__principal__diseño,
+.main__area1,
+.main__area2,
+.main__area3{
+    text-align: center;
+    padding: 1rem;
+}
+
+.main__area1,
+.main__area2,
+.main__area3{
+    background-color: var(--Blanco);
+    padding: 2rem;
+    border-radius: 1rem ;
+}
+
+.main__area1,
+.main__area2,
+.main__area3 p{
+    color: black;
+}
+
+.main__imagen{
+    width: 350px;
+    height: 350px;
+}
+
+.main__principal__diseño{
+    grid-area: header;
+}
+
+.main__area1{
+    grid-area: sc1;
+}
+
+.main__area2{
+    grid-area: sc2;
+}
+
+.main__area3{
+    grid-area: sc3;
 }
 
 @media (min-width: 768px) {
@@ -206,31 +278,9 @@ img{
     }
 }
 
-.main__principal__diseño,
-.mainarea1,
-.mainarea2,
-.mainarea3{
-    text-align: center;
-}
-.main__principal__diseño{
-    grid-area: header;
-}
-
-.main__area1{
-    grid-area: sc1;
-}
-
-.main__area2{
-    grid-area: sc2;
-}
-
-.main__area3{
-    grid-area: sc3;
-}
-
 /* main-secundario*/
 
-.ayuda{
+.main__secundario{
     display: grid;
     grid-template-areas: "ayuda apt1 apt2 apt3";
     grid-template-areas: "ayuda apt1"
