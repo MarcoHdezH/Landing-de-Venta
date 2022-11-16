@@ -21,6 +21,7 @@ h1, h2, h3, h4{
 
 h1{
     font-size: 4.8rem;
+    font-weight: bold;
 }
 
 h2{
@@ -60,26 +61,37 @@ img{
     max-width: 100%;
 }
 
+.sombra{
+    -webkit-box-shadow: 15px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 15px 10px 5px 0px rgba(0,0,0,0.75);
+    background-color: var(--Blanco);
+    padding: 2rem;
+    border-radius: 1rem ;
+}
+
+/* Header*/
 .header{
     height: 60rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     background-image: url(../assets/img/header.jpg);
+    color: var(--Blanco);
 }
-
 .header__titulo{
     text-align: center;
     font-weight: bold;
+    color: var(--Blanco);
 }
 .header__contenedor{
     width: min(90%, 120rem);
     margin: 0 auto;
 }
 .header__barra{
-    padding-top: 4rem;
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
 }
-
 @media (min-width: 768px) {
     .header__barra{
         display: flex;
@@ -88,10 +100,15 @@ img{
     }
 }
 
+.header__navegacion{
+    font-weight: bold;
+}
+
 .header__navegacion__enlace {
     display: block;
     text-align: center;
     color: var(--blanco);
+    padding: 0.5rem;
 }
 
 @media (min-width: 768px) {
@@ -99,37 +116,28 @@ img{
         display: flex;
         gap: 2rem;
     }
-
 }
 
 .header__texto {
     text-align: center;
     color: var(--blanco);
-    margin-top: 5rem;
+    margin-top: 3rem;
  }
 
  @media (min-width: 768px) {
     .header__texto {
-        margin-top: 15rem;
+        margin-top: 12rem;
     }
     .header__texto p{
         font-size: 2rem;
+        font-weight: 400;
     }
-}
-
-.header__color{
-    color: var(--Blanco) ;
-}
-
-.header__margin{
-    margin: 0.5;
 }
 
 /* Jumbotron*/
 
 .jumbotron{
-    padding: 3rem;
-    background-color: rgba(52, 50, 50, 0.221)
+    background-color:darkslategrey;
 }
 
 .jumbotron__bloques{
@@ -204,11 +212,25 @@ img{
 .tatuajes{
     display: grid;
     grid-template-areas: "titulo seccion1 seccion2 seccion3";
-    grid-template-areas: "titulo titulo titulo"
-                         "seccion1 seccion2 seccion3";
+    grid-template-areas: "titulo"
+                             "seccion1"
+                             "seccion2"
+                             "seccion3";
     padding: 3rem;
     gap: 3rem;
     background-color: darkgreen;
+}
+
+@media (min-width: 768px) {
+    .tatuajes{
+        grid-template-areas: "titulo"
+                             "seccion1"
+                             "seccion2"
+                             "seccion3";
+
+        grid-template-areas: "titulo titulo titulo"
+                             "seccion1 seccion2 seccion3";
+    }
 }
 
 .tatuajes__diseño{
