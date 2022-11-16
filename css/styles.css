@@ -14,9 +14,10 @@ html {
     box-sizing: inherit;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4, h5, h6{
     font-family: var(--fuenteTitulos);
     line-height: 1.2;
+    font-weight: bold;
 }
 
 h1{
@@ -131,10 +132,6 @@ img{
 
 /* Jumbotron*/
 
-.jumbotron{
-
-}
-
 .jumbotron__bloques{
     display: grid;
     grid-template-areas: "mensaje formulario imagen";
@@ -166,6 +163,7 @@ img{
 
 .jumbotron__formulario{
     grid-area: formulario;
+    text-align: center;
 }
 
 .jumbotron__imagen{
@@ -174,48 +172,60 @@ img{
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /* main-pricipal*/ 
 
-.tatuajes{
+.main{
+    background-color: black;
+    color: var(--Blanco);
+}
+.main__principal{
     display: grid;
-    grid-template-areas: "titulo seccion1 seccion2 seccion3";
-    grid-template-areas: "titulo"
-                             "seccion1"
-                             "seccion2"
-                             "seccion3";
+    grid-template-areas: "header sc1 sc2 sc3";
+    grid-template-areas: "header"
+                         "sc1"
+                         "sc2"
+                         "sc3";
     padding: 3rem;
     gap: 3rem;
-    background-color: darkgreen;
 }
 
 @media (min-width: 768px) {
-    .tatuajes{
-        grid-template-areas: "titulo"
-                             "seccion1"
-                             "seccion2"
-                             "seccion3";
-
-        grid-template-areas: "titulo titulo titulo"
-                             "seccion1 seccion2 seccion3";
+    .main__principal{
+        grid-template-areas: "header header"
+                             "sc1 sc2"
+                             "sc3 sc3";
+        text-align: center;
     }
 }
 
-.tatuajes__diseño{
-    grid-area: titulo;
+@media (min-width: 1024px) {
+    .main__principal{
+        grid-template-areas: "header header header"
+                             "sc1 sc2 sc3";
+    }
+}
+
+.main__principal__diseño,
+.mainarea1,
+.mainarea2,
+.mainarea3{
     text-align: center;
 }
-
-.tatuajes__1{
-    grid-area: seccion1;
-    text-align: center;
+.main__principal__diseño{
+    grid-area: header;
 }
 
-.tatuajes__2{
-    grid-area: seccion2;
+.main__area1{
+    grid-area: sc1;
 }
 
-.tatuajes__3{
-    grid-area: seccion3;
+.main__area2{
+    grid-area: sc2;
+}
+
+.main__area3{
+    grid-area: sc3;
 }
 
 /* main-secundario*/
@@ -228,7 +238,7 @@ img{
                          "ayuda apt3";
     padding: 3rem;
     gap: 3rem;
-    background-color:darkslategrey;
+    background-color:var(--Blanco);
 }
 
 .ayuda__ayuda{
@@ -265,7 +275,6 @@ img{
     text-align: center;
     padding: 3rem;
     gap: 2rem;
-    background-color: yellowgreen;
 }
 
 @media (min-width: 768px) {
