@@ -99,31 +99,26 @@ img{
         align-items: center;
     }
 }
-
 .header__navegacion{
     font-weight: bold;
 }
-
 .header__navegacion__enlace {
     display: block;
     text-align: center;
     color: var(--blanco);
     padding: 0.5rem;
 }
-
 @media (min-width: 768px) {
     .header__navegacion{
         display: flex;
         gap: 2rem;
     }
 }
-
 .header__texto {
     text-align: center;
     color: var(--blanco);
     margin-top: 3rem;
  }
-
  @media (min-width: 768px) {
     .header__texto {
         margin-top: 12rem;
@@ -137,76 +132,48 @@ img{
 /* Jumbotron*/
 
 .jumbotron{
-    background-color:darkslategrey;
+
 }
 
 .jumbotron__bloques{
     display: grid;
-    grid-template-areas: "mensaje input imagen";
+    grid-template-areas: "mensaje formulario imagen";
     grid-template-areas: "mensaje"
                          "imagen"
-                         "input";
+                         "formulario";
     gap: 3rem;
 }
 
 @media (min-width: 768px) {
     .jumbotron__bloques{
-        grid-template-areas: "mensaje imagen"
-                              "mensaje imagen "
-                              "input imagen";
+        grid-template-areas: "mensaje "
+                             "imagen"
+                             "formulario"
     }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 1024px) {
     .jumbotron__bloques{
         grid-template-areas: "mensaje imagen"
-                             "mensaje imagen"
-                             "input   imagen";
+                             "formulario imagen"
     }
 }
 
 .jumbotron__mensaje{
-    text-align: center;
-    margin-top: 5rem;
     grid-area: mensaje;
+    text-align: center;
 }
 
-.jumbotron__input{
-    grid-area: input;
-    justify-content: center;
+.jumbotron__formulario{
+    grid-area: formulario;
 }
 
 .jumbotron__imagen{
     grid-area: imagen;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
-
-.jumbotron__correo{
-    display: grid;
-    grid-template-columns: 65% 35%
-}
-
-.boton{
-    background-color: var(--secundario);
-    color: var(--blanco);
-    padding: 1rem 3rem;
-    margin-top: 3rem;
-    font-size: 2rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    border-radius: .5rem;
-    width: 90%;
-    text-align: center;
-    border: none;
-}
-
-.input__text{
-    width: 100%;
-    border: none;
-    padding: 1.5rem;
-    border-radius: .5rem;
-}
-
 /* main-pricipal*/ 
 
 .tatuajes{
