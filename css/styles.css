@@ -237,8 +237,9 @@ img{
 
 .main__area1,
 .main__area2,
-.main__area3 p{
+.main__area3 h4{
     color: black;
+    text-transform: uppercase;
 }
 
 .main__imagen{
@@ -278,33 +279,74 @@ img{
     }
 }
 
-/* main-secundario*/
+/* main-secundario (Adicionales)*/
 
 .main__secundario{
     display: grid;
-    grid-template-areas: "ayuda apt1 apt2 apt3";
-    grid-template-areas: "ayuda apt1"
-                         "ayuda apt2"
-                         "ayuda apt3";
+    grid-template-areas: "header apt1 apt2 apt3 imagen";
+    grid-template-areas: "header"
+                         "imagen"
+                         "apt1"
+                         "apt2"
+                         "apt3";
     padding: 3rem;
     gap: 3rem;
     background-color:var(--Blanco);
 }
 
-.ayuda__ayuda{
-    grid-area: ayuda;
+.main__secundario__imagen{
+    grid-area: imagen;
 }
 
-.ayuda__apt1{
+@media (min-width: 768px) {
+    .main__secundario{
+        grid-template-areas: "header header"
+                             "imagen imagen"
+                             "apt1 apt2"
+                             "apt3 apt3";
+    }
+    .main__secundario__imagen img{
+        width: 500px;
+        height: 500px;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main__secundario{
+        grid-template-areas: "imagen imagen header"
+                             "imagen imagen apt1"
+                             "imagen imagen apt2"
+                             "imagen imagen apt3";
+    }
+    .main__secundario__imagen img{
+        height: 1000px;
+        width: 700px;
+        padding: 2rem;
+    }
+}
+
+.main__secundario__header{
+    grid-area: header;
+}
+
+.main__secundario__apt1{
     grid-area: apt1;
 }
 
-.ayuda__apt2{
+.main__secundario__apt2{
     grid-area: apt2;
 }
 
-.ayuda__apt3{
+.main__secundario__apt3{
     grid-area: apt3;
+}
+
+.main__secundario__header,
+.main__secundario__apt1,
+.main__secundario__apt2,
+.main__secundario__apt3{
+    color: var(--Negro);
 }
 /* Footer*/
 
