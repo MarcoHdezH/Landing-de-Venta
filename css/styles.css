@@ -3,9 +3,9 @@
     --fuenteTitulos:'PT Sans', cursive;
     --Blanco:#ffffff;
     --Negro:#000000;
-    --secundario:#0097A7;
-}
+    --Amarillo:#E8AE14;
 
+}
 html {
     box-sizing: border-box;
     font-size:62.5%;
@@ -57,6 +57,7 @@ input{
 a{
     text-decoration: none;
     font-size: 2rem;
+    font-family: var(--fuentePrincipal);
 }
 
 img{
@@ -281,7 +282,7 @@ img{
 
 /* main-secundario (Adicionales)*/
 
-.main__secundario{
+.adicional{
     display: grid;
     grid-template-areas: "header apt1 apt2 apt3 imagen";
     grid-template-areas: "header"
@@ -294,59 +295,75 @@ img{
     background-color:var(--Blanco);
 }
 
-.main__secundario__imagen{
+.adicional__imagen{
     grid-area: imagen;
 }
 
 @media (min-width: 768px) {
-    .main__secundario{
+    .adicional{
         grid-template-areas: "header header"
                              "imagen imagen"
                              "apt1 apt2"
                              "apt3 apt3";
     }
-    .main__secundario__imagen img{
-        width: 500px;
-        height: 500px;
+    .adicional__imagen img{
         padding: 1rem;
     }
 }
 
 @media (min-width: 1024px) {
-    .main__secundario{
+    .adicional{
         grid-template-areas: "imagen imagen header"
                              "imagen imagen apt1"
                              "imagen imagen apt2"
                              "imagen imagen apt3";
     }
-    .main__secundario__imagen img{
-        height: 1000px;
+    .adicional__imagen img{
+        height: 1150px;
         width: 700px;
         padding: 2rem;
+        border-radius: 1rem;
     }
 }
 
-.main__secundario__header{
+.adicional__header{
     grid-area: header;
+    color: var(--Negro);
+    text-align: center;
 }
 
-.main__secundario__apt1{
+.adicional__apt1{
     grid-area: apt1;
 }
 
-.main__secundario__apt2{
+.adicional__apt2{
     grid-area: apt2;
 }
 
-.main__secundario__apt3{
+.adicional__apt3{
     grid-area: apt3;
 }
 
-.main__secundario__header,
-.main__secundario__apt1,
-.main__secundario__apt2,
-.main__secundario__apt3{
-    color: var(--Negro);
+.adicional__apt1,
+.adicional__apt2,
+.adicional__apt3{
+    color: var(--Blanco);
+    text-align: center;
+    background-color: var(--Negro);
+    padding: 2rem;
+    border-radius: 1rem ;
+}
+
+.adicional__apt1 h5,
+.adicional__apt2 h5,
+.adicional__apt3 h5{
+    text-transform: uppercase;
+}
+
+.adicional__apt1 a,
+.adicional__apt2 a,
+.adicional__apt3 a{
+    color: var(--Amarillo);
 }
 /* Footer*/
 
