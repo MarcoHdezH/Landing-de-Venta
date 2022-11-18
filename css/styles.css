@@ -48,6 +48,7 @@ h6{
 p{
     font-family: var(--fuentePrincipal);
     font-size: 1.8rem;
+    text-align: justify;
 }
 
 input{
@@ -149,7 +150,12 @@ img{
     text-align: center;
     color: var(--Blanco);
     margin-top: 3rem;
- }
+}
+
+.header__texto p{
+    text-align: center;
+}
+
  @media (min-width: 768px) {
     .header__texto {
         margin-top: 10rem;
@@ -252,6 +258,10 @@ img{
     grid-area: header;
 }
 
+.main__principal__diseño p{
+    text-align: center;
+}
+
 .main__area1{
     grid-area: sc1;
 }
@@ -284,12 +294,12 @@ img{
 
 .adicional{
     display: grid;
-    grid-template-areas: "header apt1 apt2 apt3 imagen";
+    grid-template-areas: "header apt1 apt2 apt3 apt4";
     grid-template-areas: "header"
-                         "imagen"
                          "apt1"
                          "apt2"
-                         "apt3";
+                         "apt3"
+                         "apt4";
     padding: 3rem;
     gap: 3rem;
     background-color:var(--Blanco);
@@ -302,9 +312,8 @@ img{
 @media (min-width: 768px) {
     .adicional{
         grid-template-areas: "header header"
-                             "imagen imagen"
                              "apt1 apt2"
-                             "apt3 apt3";
+                             "apt3 apt4";
     }
     .adicional__imagen img{
         padding: 1rem;
@@ -313,10 +322,8 @@ img{
 
 @media (min-width: 1024px) {
     .adicional{
-        grid-template-areas: "imagen imagen header"
-                             "imagen imagen apt1"
-                             "imagen imagen apt2"
-                             "imagen imagen apt3";
+        grid-template-areas: "header header header header"
+                             "apt1 apt2 apt3 apt4";
     }
     .adicional__imagen img{
         height: 1150px;
@@ -326,11 +333,13 @@ img{
     }
 }
 
-.adicional__header{
+.adicional__header,
+.adicional__header p{
     grid-area: header;
     color: var(--Negro);
     text-align: center;
 }
+
 
 .adicional__apt1{
     grid-area: apt1;
@@ -344,9 +353,14 @@ img{
     grid-area: apt3;
 }
 
+.adicional__apt4{
+    grid-area: apt4;
+}
+
 .adicional__apt1,
 .adicional__apt2,
-.adicional__apt3{
+.adicional__apt3,
+.adicional__apt4{
     color: var(--Blanco);
     text-align: center;
     background-color: var(--Negro);
@@ -356,13 +370,15 @@ img{
 
 .adicional__apt1 h5,
 .adicional__apt2 h5,
-.adicional__apt3 h5{
+.adicional__apt3 h5,
+.adicional__apt4 h5{
     text-transform: uppercase;
 }
 
 .adicional__apt1 a,
 .adicional__apt2 a,
-.adicional__apt3 a{
+.adicional__apt3 a,
+.adicional__apt4 a{
     color: var(--Amarillo);
 }
 /* Footer*/
