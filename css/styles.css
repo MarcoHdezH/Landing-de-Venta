@@ -167,28 +167,21 @@ img{
 }
 
 /* Jumbotron*/
-
 .jumbotron__bloques{
     display: grid;
-    grid-template-areas: "mensaje formulario imagen";
+    grid-template-areas: "mensaje formulario imagen aside";
     grid-template-areas: "mensaje"
                          "imagen"
-                         "formulario";
+                         "formulario"
+                         "aside";
     gap: 3rem;
-}
-
-@media (min-width: 768px) {
-    .jumbotron__bloques{
-        grid-template-areas: "mensaje "
-                             "imagen"
-                             "formulario"
-    }
 }
 
 @media (min-width: 1024px) {
     .jumbotron__bloques{
-        grid-template-areas: "mensaje imagen"
-                             "formulario imagen"
+        grid-template-areas: "mensaje mensaje"
+                             "imagen formulario"
+                             "aside aside";
     }
 }
 
@@ -197,9 +190,51 @@ img{
     text-align: center;
 }
 
-.jumbotron__formulario{
-    grid-area: formulario;
+.jumbotron__mensaje a,
+.jumbotron__mensaje p{
     text-align: center;
+}
+
+.jumbotron__formulario{
+    background-color: var(--Negro);
+    width: min(60rem,100% ); /**Usa el valor mas pequeño **/
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 1rem;
+    grid-area: formulario;
+    grid-area: formulario;
+}
+
+.jumbotron__imagen{
+    grid-area: imagen;
+    text-align: center;
+}
+
+.jumbotron__aside{
+    grid-area: aside;
+    text-align: center;
+}
+.jumbotron__aside p{
+    text-align: center;
+}
+
+.jumbotron__aside a{
+    font-size: 1.8rem;
+}
+
+
+.jumbotron__formulario fieldset{
+    border: none;
+}
+
+.jumbotron__formulario legend{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color:var(--Blanco);
 }
 
 .jumbotron__imagen{
@@ -209,8 +244,51 @@ img{
     background-position: center;
 }
 
-/* main-pricipal*/ 
+.campo{
+    margin-bottom: 1rem;
+}
 
+.campo label{
+    color:var(--Negro);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+    font-size: 1.6rem;
+    color: var(--Blanco);
+}
+
+@media (min-width: 768px) {
+    .campo label{
+        text-align: center;
+    }
+}
+
+.boton{
+    background-color: var(--Amarillo);
+    color: var(--Negro);
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width: 90%;
+    border: none;
+}
+
+.boton__enviar{
+    text-align: center;
+}
+
+.inputs{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+/* main-pricipal*/ 
 .main{
     background-color: var(--Negro);
     color: var(--Blanco);
