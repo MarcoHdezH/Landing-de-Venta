@@ -432,8 +432,10 @@ img{
     text-align: center;
 }
 
-.footer__soporte p{
+.footer__soporte a{
     text-align: center;
+    color: var(--Negro);
+    font-size: 1.2rem;
 }
 
 .footer__img{
