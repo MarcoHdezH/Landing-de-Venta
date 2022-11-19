@@ -75,7 +75,7 @@ img{
     border-radius: 1rem ;
 }
 
-/* Header*/
+/* /////////////////////////Header//////////////////////////////////*/
 .header{
     height: 60rem;
     background-size: cover;
@@ -167,7 +167,7 @@ img{
     }
 }
 
-/* Jumbotron*/
+/* ////////////////////////Jumbotron///////////////////////////////// */
 .jumbotron__bloques{
     display: grid;
     grid-template-areas: "mensaje formulario imagen aside";
@@ -271,8 +271,6 @@ img{
 .boton{
     background-color: var(--Rojo);
     color: var(--Blanco);
-    /*background-color: var(--Amarillo);
-    color: var(--Negro);*/
     padding: 1rem 3rem;
     margin-top: 3rem;
     font-size: 1.6rem;
@@ -295,18 +293,21 @@ img{
     border-radius: .5rem;
 }
 
-/* main-pricipal*/ 
+/* /////////////////////////////main-pricipal////////////////////////////// */ 
 .main{
     background-color: var(--Negro);
     color: var(--Blanco);
 }
 .main__principal{
     display: grid;
-    grid-template-areas: "header sc1 sc2 sc3";
+    grid-template-areas: "header sc1 sc2 sc3 sc4 sc5 sc6";
     grid-template-areas: "header"
                          "sc1"
                          "sc2"
-                         "sc3";
+                         "sc3"
+                         "sc4"
+                         "sc5"
+                         "sc6";
     padding: 3rem;
     gap: 3rem;
 }
@@ -314,37 +315,16 @@ img{
 .main__principal__diseño,
 .main__area1,
 .main__area2,
-.main__area3{
+.main__area3,
+.main__area4,
+.main__area5,
+.main__area6{
     text-align: center;
     padding: 1rem;
 }
 
-.main__area1,
-.main__area2,
-.main__area3{
-    background-color: var(--Blanco);
-    padding: 2rem;
-    border-radius: 1rem ;
-}
-
-.main__area1,
-.main__area2,
-.main__area3, h4{
-    color: black;
-    text-transform: uppercase;
-}
-
-.main__imagen{
-    width: 350px;
-    height: 350px;
-}
-
 .main__principal__diseño{
     grid-area: header;
-}
-
-.main__principal__diseño p{
-    text-align: center;
 }
 
 .main__area1{
@@ -359,9 +339,54 @@ img{
     grid-area: sc3;
 }
 
+.main__area4{
+    grid-area: sc4;
+}
+
+.main__area5{
+    grid-area: sc5;
+}
+
+.main__area6{
+    grid-area: sc6;
+}
+
+.main__area1,
+.main__area2,
+.main__area3,
+.main__area4,
+.main__area5,
+.main__area6{
+    background-color: var(--Blanco);
+    padding: 2rem;
+    border-radius: 1rem ;
+}
+
+.main__area1,
+.main__area2,
+.main__area3,
+.main__area4,
+.main__area5,
+.main__area6, h4{
+    color: black;
+    text-transform: uppercase;
+}
+
+.main__imagen{
+    width: 250px;
+    height: 250px;
+}
+
+.main__principal__diseño p{
+    text-align: center;
+}
+
 .main__area1 p,
 .main__area2 p,
-.main__area3 p{
+.main__area3 p,
+.main__area4 p,
+.main__area5 p,
+.main__area6 p{
     font-size: 1.4rem;
     text-align: center;
 }
@@ -370,19 +395,29 @@ img{
     .main__principal{
         grid-template-areas: "header header"
                              "sc1 sc2"
-                             "sc3 sc3";
+                             "sc3 sc4"
+                             "sc5 sc6";
         text-align: center;
+    }
+    .main__imagen{
+        width: 250px;
+        height: 250px;
     }
 }
 
 @media (min-width: 1024px) {
     .main__principal{
         grid-template-areas: "header header header"
-                             "sc1 sc2 sc3";
+                             "sc1 sc2 sc3"
+                             "sc4 sc5 sc6";
+    }
+    .main__imagen{
+        width: 350px;
+        height: 350px;
     }
 }
 
-/* main-secundario (Adicionales)*/
+/* //////////////////////////////////Main-secundario (Adicionales)///////////////////////////// */
 
 .adicional{
     display: grid;
@@ -473,7 +508,9 @@ img{
 .adicional__apt4 a{
     color: var(--Amarillo);
 }
-/* Footer*/
+
+
+/* //////////////////////////////////Footer///////////////////////////////// */
 
 .footer{
     padding: 0.5rem;
@@ -544,7 +581,6 @@ img{
                              "final final";
     }
 }
-
 @media (min-width: 1024px) {
     .footer{
         grid-template-areas: "header header header"
