@@ -4,6 +4,7 @@
     --Blanco:#ffffff;
     --Negro:#000000;
     --Amarillo:#E8AE14;
+    --Rojo:#F9053C;
 
 }
 html {
@@ -210,6 +211,10 @@ img{
     text-align: center;
 }
 
+.jumbotron__mensaje a{
+    color: var(--Negro);
+}
+
 .jumbotron__aside{
     grid-area: aside;
     text-align: center;
@@ -264,8 +269,10 @@ img{
 }
 
 .boton{
-    background-color: var(--Amarillo);
-    color: var(--Negro);
+    background-color: var(--Rojo);
+    color: var(--Blanco);
+    /*background-color: var(--Amarillo);
+    color: var(--Negro);*/
     padding: 1rem 3rem;
     margin-top: 3rem;
     font-size: 1.6rem;
@@ -322,7 +329,7 @@ img{
 
 .main__area1,
 .main__area2,
-.main__area3 h4{
+.main__area3, h4{
     color: black;
     text-transform: uppercase;
 }
@@ -350,6 +357,13 @@ img{
 
 .main__area3{
     grid-area: sc3;
+}
+
+.main__area1 p,
+.main__area2 p,
+.main__area3 p{
+    font-size: 1.4rem;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
